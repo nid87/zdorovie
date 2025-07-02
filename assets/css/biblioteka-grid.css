@@ -1,0 +1,110 @@
+/* ===============================
+   ОБЁРТКА КОНТЕНТА
+   =============================== */
+.library-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* ===============================
+   ОСНОВНОЙ МАКЕТ: САЙДБАР + КОНТЕНТ
+   =============================== */
+.main-with-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.sidebar {
+  flex: 0 0 220px;
+  max-width: 240px;
+}
+
+.section-content {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+/* ===============================
+   СЕКЦИЯ КАРТОЧЕК
+   =============================== */
+.cards-section {
+  padding: 0;
+  margin-bottom: 32px;
+}
+
+/* Улучшенная сетка карточек */
+.cards-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+  justify-items: center;
+  width: 100%;
+}
+
+/* ===============================
+   КАРТОЧКИ
+   =============================== */
+.card {
+  width: 100%;
+  max-width: 240px;
+  min-height: 140px;
+  padding: 12px 8px 10px;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.card-img {
+  height: 60px;
+  margin-bottom: 8px;
+  border-radius: 7px;
+}
+
+.card-icon {
+  font-size: 1.5em;
+  margin-bottom: 4px;
+}
+
+.card-title {
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.card-desc {
+  font-size: 0.9rem;
+  margin-bottom: 3px;
+}
+
+/* ===============================
+   МЕДИА: Планшеты и ниже
+   =============================== */
+@media (max-width: 1020px) {
+  .sidebar {
+    flex-basis: 180px;
+    max-width: 200px;
+  }
+}
+
+/* ===============================
+   МЕДИА: Мобильные устройства
+   =============================== */
+@media (max-width: 700px) {
+  .main-with-sidebar {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    margin-bottom: 18px;
+  }
+
+  .library-container {
+    padding: 0 8px;
+  }
+
+  /* Сетка карточек перестроится автоматически благодаря auto-fit */
+  /* Никаких жёстких template-columns: 1fr; */
+}

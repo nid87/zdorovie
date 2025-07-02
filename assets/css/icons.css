@@ -1,0 +1,76 @@
+.icon-gallery {
+  padding: 2rem;
+}
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+}
+.icon-tile {
+  text-align: center;
+  border: 1px solid #eee;
+  padding: 12px 8px;
+  border-radius: 8px;
+  background: #fffef7;
+  transition: all 0.2s ease;
+}
+.icon-tile:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.icon-preview svg {
+  width: 32px;
+  height: 32px;
+  stroke: #2674c7;
+  margin-bottom: 6px;
+}
+.icon-name {
+  font-weight: 600;
+  font-size: 0.95em;
+}
+.icon-label {
+  font-size: 0.85em;
+  color: #777;
+}
+.icon-gallery {
+  padding: 2rem;
+}
+.icon-search {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 16px;
+}
+.icon-tile {
+  text-align: center;
+  border: 1px solid #eee;
+  padding: 12px 8px;
+  border-radius: 8px;
+  background: #fffef7;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.icon-tile:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.icon-preview svg {
+  width: 28px;
+  height: 28px;
+  stroke: #2674c7;
+  margin-bottom: 6px;
+}
+.icon-name {
+  font-weight: 600;
+  font-size: 0.95em;
+}
+.icon-label {
+  font-size: 0.85em;
+  color: #777;
+}
+

@@ -1,0 +1,94 @@
+.shop-books-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 24px;
+}
+
+/* Карточка книги */
+.book-card {
+  background: #fffbea;
+  border: 1.5px solid #ffe082;
+  border-radius: 22px;
+  box-shadow: 0 2px 12px rgba(255, 214, 107, 0.09);
+  padding: 20px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.22s, transform 0.19s, border-color 0.18s;
+  width: 100%;             /* ← Теперь grid управляет шириной */
+  max-width: 340px;        /* ← Чтобы не расплывались на сверхшироких экранах */
+  min-width: 0;
+}
+
+.book-card:hover {
+  box-shadow: 0 8px 32px rgba(255, 214, 107, 0.13);
+  border-color: #f7b801;
+  transform: translateY(-4px) scale(1.025);
+}
+
+.book-card-cover {
+  width: 110px;
+  height: 156px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px #ffe08233;
+  background: #eee;
+}
+
+.book-card-title {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #2674c7;
+  margin: 10px 0 3px;
+  text-align: center;
+}
+
+.book-card-author {
+  color: #888;
+  font-size: 0.99em;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.book-card-desc {
+  font-size: 1.01em;
+  color: #444;
+  text-align: center;
+  margin-bottom: 18px;
+  min-height: 54px;
+  line-height: 1.45;
+  flex-grow: 1;
+}
+
+.book-card-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.shop-btn {
+  background: #2674c7;
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 1px 6px #2674c733;
+  transition: background 0.16s;
+  display: inline-block;
+}
+
+.shop-btn:hover,
+.shop-btn:focus {
+  background: #1256a3;
+  color: #fff;
+  text-decoration: none;
+}

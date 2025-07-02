@@ -1,0 +1,42 @@
+<header class="main-header">
+    <a href="{{ 'home'|page }}" class="logo-title">
+        <span class="logo-emoji">😊</span>
+        <span class="site-title">Счастье рядом</span>
+    </a>
+    <div class="search-link-bar"
+        tabindex="0"
+        role="button"
+        aria-label="Открыть поиск по сайту"
+        onclick="location.href='{{ 'search'|page }}'"
+        onkeydown="if(event.key==='Enter'||event.key===' '){location.href='{{ 'search'|page }}'}">
+        <span class="search-icon" aria-hidden="true">
+            <!-- SVG иконка поиска -->
+            <svg width="22" height="22" viewBox="0 0 20 20" fill="none">
+                <circle cx="9" cy="9" r="7" stroke="#8d929a" stroke-width="2"/>
+                <line x1="14.07" y1="14.07" x2="18" y2="18" stroke="#8d929a" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </span>
+        <span class="search-placeholder">Поиск...</span>
+    </div>
+    <button id="menu-toggle" class="burger" aria-label="Открыть меню">
+        <span></span><span></span><span></span>
+    </button>
+  <nav class="nav">
+  <ul class="nav-menu" id="nav-list">
+    <li><a href="/schastje">Счастье</a></li>
+    <li><a href="/uspeh">Успех</a></li>
+    <li class="nav-item">
+      <a href="#">Отношения</a>
+      <ul class="submenu">
+        <li><a href="/love">Любовь</a></li>
+        <li><a href="/semia">Семья</a></li>
+        <li><a href="/deti">Дети</a></li>
+      </ul>
+    </li>
+    <li><a href="/zdorovie">Здоровье</a></li>
+    <li><a href="/biblioteka">Библиотека</a></li>
+    <li><a href="/magazin">Магазин</a></li>
+    <li><a href="/search">Поиск</a></li>
+  </ul>
+</nav>
+</header>

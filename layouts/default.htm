@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Поддержка относительных ссылок на поддомене -->
+  <base href="https://zdorovie.schastie.by/" />
+
+  <title>
+    {% if this.page.meta_title %}
+      {{ this.page.meta_title }}
+    {% elseif this.page.title %}
+      {{ this.page.title }} | Счастье рядом
+    {% else %}
+      Счастье рядом
+    {% endif %}
+  </title>
+
+  <meta name="description" content="{{ this.page.meta_description ?: 'Практические идеи, статьи и вдохновение для счастливой жизни' }}">
+  <meta name="keywords" content="{{ this.page.meta_keywords ?: 'счастье, здоровье, позитив, книги, вдохновение, йога, аюрведа, радость' }}">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="{{ this.page.meta_title ?: this.page.title }}">
+  <meta property="og:description" content="{{ this.page.meta_description }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ this.url }}">
+  <meta property="og:site_name" content="Счастье рядом">
+  <meta property="og:image" content="{{ 'assets/images/preview.jpg' | theme }}">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ this.page.meta_title ?: this.page.title }}">
+  <meta name="twitter:description" content="{{ this.page.meta_description }}">
+  <meta name="twitter:image" content="{{ 'assets/images/preview.jpg' | theme }}">
+
+  <!-- Favicon -->
+  <link rel="icon" href="{{ 'assets/images/favicon.ico' | theme }}" type="image/x-icon">
+  <link rel="apple-touch-icon" href="{{ 'assets/images/favicon-apple.png' | theme }}">
+
+<!-- 1. Сбросы и утилиты -->
+<link rel="stylesheet" href="{{ 'assets/css/reset.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/utils.css' | theme }}">
+
+<!-- 2. Типографика и тема -->
+<link rel="stylesheet" href="{{ 'assets/css/typography-adaptive.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/theme.css' | theme }}">
+
+<!-- 3. Основные компоненты -->
+<link rel="stylesheet" href="{{ 'assets/css/header.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/nav.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/banner.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/footer.css' | theme }}">
+
+<!-- 4. Функциональные и визуальные модули -->
+<link rel="stylesheet" href="{{ 'assets/css/search.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/sidebar.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/breadcrumbs.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/sections.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/icons.css' | theme }}">
+
+<!-- 5. Карточки -->
+<link rel="stylesheet" href="{{ 'assets/css/cards.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/book-card.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/shop-books.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/recommend-card.css' | theme }}">
+
+<!-- 6. Структура библиотеки -->
+<link rel="stylesheet" href="{{ 'assets/css/biblioteka.css' | theme }}">
+<link rel="stylesheet" href="{{ 'assets/css/biblioteka-grid.css' | theme }}">
+
+</head>
+<body>
+
+    {% partial "site/header" %}
+
+    <main>
+        {% partial "universal/breadcrumbs" %}
+        
+        {% page %}
+    </main>
+
+    {% partial "site/footer" %}
+   <script src="{{ 'assets/js/script.js' | theme }}"></script>
+<script src="{{ 'assets/js/search.js' | theme }}"></script>
+
+</body>
+</html>
+
+

@@ -1,0 +1,128 @@
+.book-card {
+  width: 300px;
+  min-width: 240px;
+  max-width: 340px;
+  background: #fffbea;
+  border: 1.5px solid #ffe082;
+  border-radius: 22px;
+  box-shadow: 0 2px 12px rgba(255, 214, 107, 0.09);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 16px 18px 16px;
+  margin-bottom: 18px;
+  transition: box-shadow 0.22s, transform 0.19s, border-color 0.18s;
+}
+
+.book-card-cover {
+  width: 120px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 14px;
+  box-shadow: 0 4px 14px #ffe08233;
+  background: #eee;
+  display: block;
+}
+
+.book-card-title {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #2674c7;
+  margin: 10px 0 3px 0;
+  text-align: center;
+}
+
+.book-card-author {
+  color: #888;
+  font-size: 0.99em;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.book-card-desc {
+  font-size: 1.01em;
+  color: #444;
+  text-align: center;
+  margin-bottom: 18px;
+  min-height: 54px;
+  line-height: 1.45;
+  flex-grow: 1;
+}
+
+.book-card-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  width: 100%;
+  margin-top: auto;
+  flex-wrap: wrap;
+}
+
+/* Основная кнопка */
+.shop-btn {
+  background: #2674c7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.16s, color 0.16s;
+  text-decoration: none;
+  box-shadow: 0 1px 6px #2674c733;
+  display: inline-block;
+  outline: none;
+  border: 2px solid transparent;
+}
+
+.shop-btn:hover, .shop-btn:focus {
+  background: #1256a3;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Второстепенная кнопка */
+.shop-btn--secondary {
+  background: #fff;
+  color: #2674c7;
+  border: 2px solid #2674c7;
+}
+
+.shop-btn--secondary:hover, .shop-btn--secondary:focus {
+  background: #e3f0ff;
+  color: #1256a3;
+}
+
+/* Обводка */
+.shop-btn--outline {
+  background: transparent;
+  color: #2674c7;
+  border: 2px solid #ffe082;
+}
+
+.shop-btn--outline:hover, .shop-btn--outline:focus {
+  background: #fffbea;
+  color: #1256a3;
+}
+
+/* Иконка для кнопки */
+.shop-btn .icon {
+  margin-right: 4px;
+  font-size: 1em;
+  vertical-align: middle;
+}
+
+/* Адаптивность */
+@media (max-width: 700px) {
+  .book-card {
+    width: 98vw;
+    min-width: 140px;
+    max-width: none;
+  }
+  .book-card-buttons {
+    gap: 6px;
+  }
+}

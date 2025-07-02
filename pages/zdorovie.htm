@@ -1,0 +1,80 @@
+title = "Секреты здоровья"
+url = "/zdorovie"
+layout = "default"
+meta_title = "Секреты здоровья — Счастье рядом"
+meta_description = "Практические советы, книги, видео и вдохновение для здоровья тела и души."
+meta_keywords = "здоровье, секреты здоровья, здоровое питание, йога, медитация, аюрведа, профилактика, причины болезней"
+==
+
+{% set data = __SELF__.loadYaml('sidebar_zdorovie.yaml') %}
+{% partial 'universal/sidebar' title=data.title items=data.items %}
+
+
+<section class="banner banner--medium">
+  <img src="{{ 'assets/images/zdorovie-banner.webp' | theme }}" alt="Здоровье" class="banner-img" />
+  <div class="banner-title-group">
+    <div class="banner-title">Секреты здоровья</div>
+    <div class="banner-subtitle">
+      Практические советы, книги, видео и вдохновение для здоровья тела и души.
+    </div>
+  </div>
+</section>
+
+<div class="library-container">
+  <div class="main-with-sidebar">
+
+    <!-- Сайдбар -->
+    <div class="sidebar">
+  {% set data = __SELF__.loadYaml('sidebar_zdorovie.yaml') %}
+{% partial 'universal/sidebar' title=data.title items=data.items %}
+<p style="color:#999; font-size:0.9em;">Сайдбар подключён?</p>
+
+</div>
+    <!-- Основной контент -->
+    <section class="section-content">
+           
+      <div class="cards-section">
+        <div class="cards-list">
+
+          <div class="card">
+            <div class="card-icon">🥗</div>
+            <div class="card-title">Здоровое питание</div>
+            <div class="card-desc">Простые привычки и советы, как питаться с пользой и удовольствием.</div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🧘‍♂️</div>
+            <div class="card-title">Йога и медитация</div>
+            <div class="card-desc">Дыхание, осознанность и гибкость — в помощь телу и уму.</div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🕒</div>
+            <div class="card-title">Режим дня</div>
+            <div class="card-desc">Как выстроить день, чтобы сохранить энергию и баланс.</div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">🚭</div>
+            <div class="card-title">Свобода от зависимости</div>
+            <div class="card-desc">Инструменты и подходы, которые помогают преодолеть вредные привычки.</div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📚</div>
+            <div class="card-title">Полезные книги</div>
+            <div class="card-desc">Литература, раскрывающая принципы целостного здоровья.</div>
+          </div>
+
+          <div class="card">
+            <div class="card-icon">📺</div>
+            <div class="card-title">Вдохновляющие видео</div>
+            <div class="card-desc">Мини-фильмы, лекции и добрые истории — для ума и сердца.</div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+  </div>
+</div>

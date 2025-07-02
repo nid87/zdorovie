@@ -1,0 +1,57 @@
+title = "Иконки"
+url = "/icons"
+layout = "default"
+==
+{% set icons = [
+  { name: 'book', label: 'Книга' },
+  { name: 'play', label: 'Видео' },
+  { name: 'audio', label: 'Аудио' },
+  { name: 'heart', label: 'Ценности' },
+  { name: 'target', label: 'Цели' },
+  { name: 'tag', label: 'Темы' },
+  { name: 'star', label: 'Успех' },
+  { name: 'brain', label: 'Психология' },
+  { name: 'people', label: 'Отношения' },
+  { name: 'yoga', label: 'Развитие' },
+  { name: 'bolt', label: 'Действие' },
+  { name: 'clock', label: 'Распорядок' },
+  { name: 'lightbulb', label: 'Идеи, интересное' },
+  { name: 'message', label: 'Сообщения' },
+  { name: 'couple', label: 'Партнёрство' },
+  { name: 'warning', label: 'Вредные привычки' },
+  { name: 'health', label: 'Причины болезней' },
+  { name: 'spirit', label: 'Бог, духовность' },
+  { name: 'faith', label: 'Вера, человек' },
+  { name: 'law', label: 'Духовные законы' },
+  { name: 'help', label: 'Служение' },
+  { name: 'wisdom', label: 'Мудрецы' },
+  { name: 'elder', label: 'Старшие' },
+  { name: 'default', label: 'По умолчанию' }
+] %}
+
+<main class="icon-gallery">
+  <h1 class="section-title">🧩 Библиотека иконок</h1>
+  <input type="text" placeholder="🔎 Поиск иконки..." class="icon-search" oninput="filterIcons(this.value)">
+  <div class="icon-grid" id="icon-grid">
+    {% for icon in icons %}
+      <div class="icon-tile" data-name="{{ icon.name }}" onclick="copyIcon('{{ icon.name }}')">
+        <div class="icon-preview">{% partial 'icons/' ~ icon.name %}</div>
+        <div class="icon-name">{{ icon.name }}</div>
+        <div class="icon-label">{{ icon.label }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</main>
+
+<script>
+function filterIcons(query) {
+  const tiles = document.querySelectorAll('.icon-tile');
+  tiles.forEach(tile => {
+    tile.style.display = tile.dataset.name.includes(query.trim()) ? 'block' : 'none';
+  });
+}
+function copyIcon(name) {
+  navigator.clipboard.writeText("icons/" + name);
+  alert("✓ Скопировано: 'icons/" + name + "'");
+}
+</script>

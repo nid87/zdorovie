@@ -1,0 +1,17 @@
+{% set segments = this.page.url | split('/') %}
+{% set root = '/' ~ segments[1] %}
+{% set isSubpage = segments | length > 2 %}
+
+<nav class="breadcrumbs">
+  <ul class="breadcrumbs-list">
+    <li><a href="/">Главная</a></li>
+
+    {% if segments[1] %}
+      <li><a href="{{ root }}">{{ segments[1] | capitalize }}</a></li>
+    {% endif %}
+
+    {% if isSubpage %}
+      <li>{{ this.page.title }}</li>
+    {% endif %}
+  </ul>
+</nav>

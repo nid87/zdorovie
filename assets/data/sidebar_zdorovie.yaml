@@ -1,0 +1,47 @@
+title: "Темы раздела Здоровье"
+items:
+  - title: "Афоризмы и высказывания"
+    url: "/zdorovie/aforizmy"
+    icon: "icons/quote"
+
+  - title: "Причины болезней"
+    url: "/zdorovie/prichiny"
+    icon: "icons/warning"
+
+  - title: "Здоровое питание"
+    url: "/zdorovie/pitanie"
+    icon: "icons/food"
+
+  - title: "Режим дня"
+    url: "/zdorovie/rezhim"
+    icon: "icons/clock"
+
+  - title: "Йога и медитация"
+    icon: "icons/yoga"
+    children:
+      - title: "Йога"
+        url: "/zdorovie/joga"
+        icon: "icons/yoga"
+
+      - title: "Медитация"
+        url: "/zdorovie/meditacija"
+        icon: "icons/meditation"
+
+  - title: "Свобода от зависимости"
+    url: "/zdorovie/zavisimost"
+    icon: "icons/no-smoking"
+
+  - title: "Читать и смотреть"
+    icon: "icons/media"
+    children:
+      - title: "Статьи"
+        url: "/zdorovie/statji"
+        icon: "icons/article"
+
+      - title: "Книги"
+        url: "/zdorovie/knigi"
+        icon: "icons/book"
+
+      - title: "Видео"
+        url: "/zdorovie/video"
+        icon: "icons/video"

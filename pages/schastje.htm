@@ -1,0 +1,99 @@
+title = "Счастье"
+url = "/schastje"
+layout = "default"
+==
+{% set items = [
+  {
+    title: 'Афоризмы',
+    url: '/schastje/aforizmy',
+    icon: 'icons/quote'
+  },
+  {
+    title: 'Весёлые анекдоты',
+    url: '/schastje/anekdoty',
+    icon: 'icons/laugh'
+  },
+  {
+    title: 'Позитивность',
+    url: '/schastje/pozitiv',
+    icon: 'icons/sun',
+    children: [
+      { title: 'Радость', url: '/schastje/pozitiv/radost' },
+      { title: 'Юмор', url: '/schastje/pozitiv/jumor' },
+      { title: 'Благодарность', url: '/schastje/pozitiv/blagodarnost' }
+    ]
+  },
+  {
+    title: 'Стихи о радости',
+    url: '/schastje/stihi',
+    icon: 'icons/poem'
+  },
+  {
+    title: 'Как стать счастливым',
+    url: '/schastje/kak',
+    icon: 'icons/idea'
+  },
+  {
+    title: 'Для мужчин',
+    url: '/schastje/mujchiny',
+    icon: 'icons/male'
+  },
+  {
+    title: 'Для женщин',
+    url: '/schastje/zhenshiny',
+    icon: 'icons/female'
+  },
+  {
+    title: 'Для всех',
+    url: '/schastje/dlja-vseh',
+    icon: 'icons/people'
+  },
+  {
+    title: 'Статьи',
+    url: '/schastje/statji',
+    icon: 'icons/article'
+  },
+  {
+    title: 'Книги',
+    url: '/schastje/knigi',
+    icon: 'icons/book'
+  },
+  {
+    title: 'Видео',
+    url: '/schastje/video',
+    icon: 'icons/video'
+  }
+] %}
+
+
+<main id="main-content">
+  <!-- Баннер -->
+  <section class="banner banner--medium">
+    <img src="{{ 'assets/images/schastje-banner.webp' | theme }}" alt="Девушка встречает рассвет" class="banner-img" />
+    <div class="banner-title-group">
+      <div class="banner-title">Счастье</div>
+      <div class="banner-subtitle">Всё о внутренней радости, гармонии и простых способах стать счастливее каждый день.</div>
+    </div>
+  </section>
+
+  <!-- Контент -->
+  <div class="library-container">
+    <nav class="breadcrumbs" aria-label="breadcrumb">
+      <ul class="breadcrumbs-list">
+        <li><a href="{{ '/' | page }}">Главная</a></li>
+        <li>Счастье</li>
+      </ul>
+    </nav>
+
+    <div class="main-with-sidebar">
+      <!-- ⬇️ Вот сюда вставляется сайдбар -->
+      <aside class="sidebar">
+        {% partial 'universal/sidebar' items=items %}
+      </aside>
+
+      <section class="section-content">
+        {% partial 'schastje/cards' %}
+      </section>
+    </div>
+  </div>
+</main>
